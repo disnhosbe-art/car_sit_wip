@@ -1,0 +1,405 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DRIVE X | Premium Cars</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #090909;
+    color: white;
+}
+
+header {
+    height: 80px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #111;
+    border-bottom: 1px solid #252525;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #eaff00;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #eaff00;
+}
+
+.hero {
+    min-height: 560px;
+    padding: 100px 8%;
+    display: flex;
+    align-items: center;
+    background:
+    linear-gradient(90deg, #090909 15%, transparent 100%),
+    url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1800")
+    center/cover;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #eaff00;
+}
+
+.hero p {
+    color: #bbb;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #eaff00;
+    color: #080808;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+section {
+    padding: 75px 8%;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.section-title span {
+    color: #eaff00;
+}
+
+.subtitle {
+    color: #888;
+    margin-bottom: 35px;
+}
+
+.search-box {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.search-box input,
+.search-box select {
+    background: #181818;
+    border: 1px solid #333;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-box input {
+    flex: 1;
+}
+
+.cars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.car-card {
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.car-card:hover {
+    transform: translateY(-7px);
+    border-color: #eaff00;
+}
+
+.car-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.car-info {
+    padding: 22px;
+}
+
+.car-info h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.details {
+    color: #999;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.price {
+    color: #eaff00;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.car-info button {
+    width: 100%;
+    padding: 13px;
+    background: #eaff00;
+    border: none;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.about {
+    background: #131313;
+    text-align: center;
+}
+
+.about p {
+    color: #aaa;
+    max-width: 700px;
+    margin: 20px auto;
+    line-height: 1.9;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background: #111;
+    text-align: center;
+    padding: 25px;
+    color: #777;
+    border-top: 1px solid #252525;
+}
+
+@media(max-width: 900px) {
+    .cars {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+    header {
+        padding: 15px 5%;
+        height: auto;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 450px;
+        padding: 65px 6%;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .cars {
+        grid-template-columns: 1fr;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">DRIVE X.</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#cars">Cars</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero" id="home">
+    <div class="hero-content">
+        <h1>FIND YOUR<br><span>DREAM CAR.</span></h1>
+        <p>
+            Discover premium cars, explore powerful engines
+            and find the perfect vehicle for your lifestyle.
+        </p>
+        <a href="#cars" class="btn">EXPLORE CARS →</a>
+    </div>
+</div>
+
+<section id="cars">
+
+    <h2 class="section-title">OUR <span>CARS</span></h2>
+    <p class="subtitle">Explore our premium car collection.</p>
+
+    <div class="search-box">
+        <input type="text" id="search"
+        placeholder="Search your favorite car..."
+        oninput="filterCars()">
+
+        <select id="brand" onchange="filterCars()">
+            <option value="">All Brands</option>
+            <option value="BMW">BMW</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="Audi">Audi</option>
+            <option value="Porsche">Porsche</option>
+        </select>
+    </div>
+
+    <div class="cars" id="carList">
+
+        <div class="car-card" data-brand="BMW">
+            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800" alt="BMW">
+            <div class="car-info">
+                <h3>BMW M4 Competition</h3>
+                <p class="details">2024 • Automatic • Petrol</p>
+                <div class="price">850,000 DH</div>
+                <button onclick="contactCar('BMW M4 Competition')">CONTACT US</button>
+            </div>
+        </div>
+
+        <div class="car-card" data-brand="Mercedes">
+            <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800" alt="Mercedes">
+            <div class="car-info">
+                <h3>Mercedes AMG GT</h3>
+                <p class="details">2024 • Automatic • Petrol</p>
+                <div class="price">1,200,000 DH</div>
+                <button onclick="contactCar('Mercedes AMG GT')">CONTACT US</button>
+            </div>
+        </div>
+
+        <div class="car-card" data-brand="Audi">
+            <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=800" alt="Audi">
+            <div class="car-info">
+                <h3>Audi RS7</h3>
+                <p class="details">2023 • Automatic • Petrol</p>
+                <div class="price">950,000 DH</div>
+                <button onclick="contactCar('Audi RS7')">CONTACT US</button>
+            </div>
+        </div>
+
+        <div class="car-card" data-brand="Porsche">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800" alt="Porsche">
+            <div class="car-info">
+                <h3>Porsche 911 Carrera</h3>
+                <p class="details">2024 • Automatic • Petrol</p>
+                <div class="price">1,500,000 DH</div>
+                <button onclick="contactCar('Porsche 911 Carrera')">CONTACT US</button>
+            </div>
+        </div>
+
+        <div class="car-card" data-brand="BMW">
+            <img src="https://images.unsplash.com/photo-1556189250-72ba954cfc2b?w=800" alt="BMW">
+            <div class="car-info">
+                <h3>BMW M5</h3>
+                <p class="details">2023 • Automatic • Hybrid</p>
+                <div class="price">1,100,000 DH</div>
+                <button onclick="contactCar('BMW M5')">CONTACT US</button>
+            </div>
+        </div>
+
+        <div class="car-card" data-brand="Mercedes">
+            <img src="https://images.unsplash.com/photo-1618843479618-39b9c5c0b7b8?w=800" alt="Mercedes">
+            <div class="car-info">
+                <h3>Mercedes G-Class</h3>
+                <p class="details">2024 • Automatic • Diesel</p>
+                <div class="price">1,800,000 DH</div>
+                <button onclick="contactCar('Mercedes G-Class')">CONTACT US</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2 class="section-title">ABOUT <span>DRIVE X</span></h2>
+    <p>
+        DRIVE X is a premium automotive showcase.
+        Discover amazing vehicles, compare models
+        and explore the world of luxury and performance cars.
+    </p>
+</section>
+
+<section class="contact" id="contact">
+    <h2>READY TO FIND YOUR CAR?</h2>
+    <p class="subtitle">Get in touch with our team.</p>
+    <a href="mailto:contact@drivex.com" class="btn">CONTACT US</a>
+</section>
+
+<footer>
+    © 2026 DRIVE X. All Rights Reserved.
+</footer>
+
+<script>
+function filterCars() {
+    const search = document.getElementById("search").value.toLowerCase();
+    const brand = document.getElementById("brand").value;
+    const cars = document.querySelectorAll(".car-card");
+
+    cars.forEach(car => {
+        const name = car.querySelector("h3").textContent.toLowerCase();
+        const carBrand = car.dataset.brand;
+
+        car.style.display =
+            name.includes(search) &&
+            (!brand || brand === carBrand)
+            ? "block" : "none";
+    });
+}
+
+function contactCar(car) {
+    const subject = encodeURIComponent("Car inquiry: " + car);
+    window.location.href =
+        "mailto:contact@drivex.com?subject=" + subject;
+}
+</script>
+
+</body>
+</html>
